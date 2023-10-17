@@ -1,0 +1,15 @@
+<div class="topnav" >
+  <a href="/fields">Home</a>
+  <a href="/boulders">All Boulders</a>
+</div>
+
+<h1><%= @field.field_name %> </h1>
+
+<p><a href="/fields/<%= @field.id %>/boulders">Explore the Area</a></p>
+<p><a href="/fields/<%= @field.id %>/edit">Update Area</a></p>
+<p><%= link_to "Destroy Field", "/fields/#{@field.id}", data: {turbo_method: :delete} %></p>
+
+<p>Area Name: <%= @field.field_name %></p>
+<p>Total Boulders: <%= @field.boulder_count %></p>
+<p>In Season: <%= @field.in_season %></p>
+<p>Total Sends: <%= @field.total_ticks %></p>

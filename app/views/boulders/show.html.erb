@@ -1,0 +1,15 @@
+<div class="topnav" >
+  <a href="/fields">Home</a>
+  <a href="/boulders">All Boulders</a>
+</div>
+
+<h1><%= @boulder.name %></h1>
+
+<p><a href="/boulders/<%= @boulder.id %>/edit">Update Boulder</a></p>
+<p><%= link_to "Delete Boulder", "/boulders/#{@boulder.id}", data: {turbo_method: :delete} %></p>
+
+<p>Grade: <%= @boulder.v_grade %></p>
+<p>Sent: <%= @boulder.tick %></p>
+<p>Field id: <%= @boulder.field_id %></p>
+<p>Created at: <%= @boulder.created_at %></p>
+<p>Updated at: <%= @boulder.updated_at %></p>

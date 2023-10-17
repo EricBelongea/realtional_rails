@@ -1,0 +1,14 @@
+<div class="topnav" >
+  <a href="/fields">Home  </a>
+  <a href="/boulders">All Boulders</a>
+</div>
+
+<h1>Welcome!</h1>
+<h4><a href="/fields/new">Create a new Area</a></h4>
+
+<% @fields.each do |field| %>
+  <h2><a href="/fields/<%= field.id %>"><%= field.field_name %></a></h2>
+  <p><a href="/fields/<%= field.id %>/edit">Edit Me</a></p>
+  <p><%= link_to "Delete Field", "/fields/#{field.id}", data: {turbo_method: :delete} %></p>
+  <p>Created at: <%= field.created_at %></p>
+<% end %>

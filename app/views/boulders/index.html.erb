@@ -1,0 +1,14 @@
+<div class="topnav" >
+  <a href="/fields">Home</a>
+  <a href="/boulders">All Boulders</a>
+</div>
+
+<h1>Boulders</h1>
+
+
+
+<% @boulders.each do |boulder| %>
+<h3><a href="/boulders/<%= boulder.id %>"><%= boulder.name %></a></h3>
+<p>Grade: <%= boulder.v_grade %></p>
+<p>Sent: <%= boulder.tick %></p>
+<% end %>
